@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="seferov_aws.service_factory.class">Seferov\Bundle\AwsBundle\Services\ServicesFactory</parameter>
+        <parameter key="seferov_aws.credentials.class">Seferov\Bundle\AwsBundle\Entity\AWSCredentials</parameter>
+    </parameters>
+
+    <services>
+        <service id="seferov_aws.service_factory" class="%seferov_aws.service_factory.class%" />
+
+        <service id="seferov_aws.credentials" class="%seferov_aws.credentials.class%" public="false">
+            <argument type="collection">
+                <argument key="key">%seferov_aws.key%</argument>
+                <argument key="secret">%seferov_aws.secret%</argument>
+                <argument key="region">%seferov_aws.region%</argument>
+            </argument>
+        </service>
+
+        <service id="seferov_aws.service"
+                 factory-method="get"
+                 factory-service="seferov_aws.service_factory"
+                 abstract="true">
+            <argument type="service" id="seferov_aws.credentials" />
+        </service>
+
+        <service id="aws.s3" class="AmazonS3" parent="seferov_aws.service">
+            <argument>s3</argument>
+        </service>
+
+        <service id="aws.sqs" class="AmazonSQS" parent="seferov_aws.service">
+            <argument>sqs</argument>
+        </service>
+    </services>
+
+</container>

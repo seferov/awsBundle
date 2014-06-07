@@ -1,0 +1,24 @@
+{
+    "name": "seferov/aws-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 wrapper of AWS SDK",
+    "keywords": ["aws", "amazon web services"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Farhad Safarov",
+            "homepage": "http://ferhad.in"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.1",
+        "aws/aws-sdk-php": "2.4.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Seferov\\AwsBundle\\": ""
+        }
+    }
+}
