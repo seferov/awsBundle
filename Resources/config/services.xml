@@ -16,8 +16,9 @@
             <argument type="collection">
                 <argument key="key">%seferov_aws.key%</argument>
                 <argument key="secret">%seferov_aws.secret%</argument>
-                <argument key="s3">%seferov_aws.s3%</argument>
                 <argument key="region">%seferov_aws.region%</argument>
+                <argument key="s3">%seferov_aws.s3%</argument>
+                <argument key="sqs">%seferov_aws.sqs%</argument>
             </argument>
         </service>
 

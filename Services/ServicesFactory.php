@@ -24,7 +24,7 @@ class ServicesFactory
     /**
      * @var array
      */
-    private static $AVAILABLE_SERVICES = array('s3', 'sqs');
+    public static $AVAILABLE_SERVICES = array('s3', 'sqs');
 
     /**
      * @param $service
