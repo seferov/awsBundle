@@ -1,6 +1,8 @@
 AWS Bundle
 ==========
 
+[![Build Status](https://travis-ci.org/seferov/aws-bundle.svg?branch=master)](https://travis-ci.org/seferov/aws-bundle)
+
 Symfony2 AWS Bundle which wraps [official AWS SDK](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html).
 
 ## Installation:
