@@ -40,7 +40,7 @@ class ServicesFactory
             throw new \InvalidArgumentException($service.' is not a available as a AWS Bundle Service');
         }
 
-        $aws = Aws::factory($AWSCredentials->getParameters());
+        $aws = Aws::factory($AWSCredentials->getParameters($service));
 
         return $aws->get($service);
     }

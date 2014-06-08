@@ -58,6 +58,8 @@ seferov_aws:
     secret: CHANGE_WITH_YOUR_AWS_SECRET
 ```
 
+For further configuration see [Configuration page](https://github.com/seferov/aws-bundle/blob/master/Resources/doc/configuration.md).
+
 ## Usage
 
 Example:
