@@ -5,8 +5,8 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="seferov_aws.service_factory.class">Seferov\Bundle\AwsBundle\Services\ServicesFactory</parameter>
-        <parameter key="seferov_aws.credentials.class">Seferov\Bundle\AwsBundle\Entity\AWSCredentials</parameter>
+        <parameter key="seferov_aws.service_factory.class">Seferov\AwsBundle\Services\ServicesFactory</parameter>
+        <parameter key="seferov_aws.credentials.class">Seferov\AwsBundle\Entity\AwsCredentials</parameter>
     </parameters>
 
     <services>
