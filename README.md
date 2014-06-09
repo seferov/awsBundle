@@ -14,7 +14,7 @@ Add to your composer.json
 ``` js
 {
     "require": {
-        "seferov/aws-bundle": "dev-master"
+        "seferov/aws-bundle": "~1.0"
     }
 }
 ```
@@ -29,7 +29,7 @@ php composer.phar update seferov/aws-bundle
 Or simply you can run the command:
 
 ``` bash
-php composer.phar require seferov/aws-bundle:dev-master
+php composer.phar require seferov/aws-bundle:~1.0
 ```
 
 ### 2. Register
