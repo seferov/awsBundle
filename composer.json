@@ -13,7 +13,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "symfony/framework-bundle": "~2.1",
+        "symfony/symfony": "~2.1",
         "aws/aws-sdk-php": "2.4.10"
     },
     "require-dev": {

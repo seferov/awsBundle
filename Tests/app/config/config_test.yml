@@ -1,0 +1,10 @@
+parameters:
+    secret: symfonySecret
+    kernel.secret: 'symfonySecret'
+
+framework:
+    test: ~
+
+seferov_aws:
+    key: key
+    secret: secret

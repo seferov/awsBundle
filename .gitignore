@@ -1,6 +1,8 @@
 composer.lock
 phpunit.xml
 
+Tests/app/cache/*
+
 vendor/*
 
 .idea/*
