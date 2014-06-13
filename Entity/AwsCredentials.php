@@ -40,15 +40,11 @@ class AwsCredentials
     }
 
     /**
-     * @param null|string $service
+     * @param  null|string $service
      * @return array
      */
     public function getParameters($service = null)
     {
-        if ($service && array_key_exists($service, self::$parameters)) {
-            return self::$parameters[$service];
-        }
-
-        return self::$parameters;
+        return self::$parameters[$service];
     }
 }

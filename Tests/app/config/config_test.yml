@@ -8,3 +8,8 @@ framework:
 seferov_aws:
     key: key
     secret: secret
+    region: 'eu-west-1'
+    services:
+        sqs:
+            key: sqs_key
+            secret: sqs_secret

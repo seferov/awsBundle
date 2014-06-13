@@ -27,30 +27,16 @@ class ServicesFactory
     public static $AVAILABLE_SERVICES = array('s3', 'sqs');
 
     /**
-     * @param $service
      * @param  AWSCredentials            $AWSCredentials
+     * @param $service
      * @return mixed
      * @throws \InvalidArgumentException
      */
     public function get(AWSCredentials $AWSCredentials, $service)
     {
         $service = strtolower($service);
-
-        if (!in_array($service, self::$AVAILABLE_SERVICES)) {
-            throw new \InvalidArgumentException($service.' is not a available as a AWS Bundle Service');
-        }
-
         $aws = Aws::factory($AWSCredentials->getParameters($service));
 
         return $aws->get($service);
-    }
-
-    /**
-     * @param  string  $service
-     * @return Boolean
-     */
-    private function isValidServiceName($service)
-    {
-        return !in_array($service, self::$AVAILABLE_SERVICES);
     }
 }
