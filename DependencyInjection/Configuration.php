@@ -42,6 +42,16 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('region')
                     ->defaultValue(null)
                 ->end()
+                ->arrayNode('services')
+                    ->useAttributeAsKey('name')
+                    ->prototype('array')
+                        ->children()
+                            ->scalarNode('key')->end()
+                            ->scalarNode('secret')->end()
+                            ->scalarNode('region')->end()
+                        ->end()
+                    ->end()
+                ->end()
             ->end()
         ;
 

@@ -14,7 +14,7 @@ Add to your composer.json
 ``` js
 {
     "require": {
-        "seferov/aws-bundle": "dev-master"
+        "seferov/aws-bundle": "~1.0"
     }
 }
 ```
@@ -29,7 +29,7 @@ php composer.phar update seferov/aws-bundle
 Or simply you can run the command:
 
 ``` bash
-php composer.phar require seferov/aws-bundle:dev-master
+php composer.phar require seferov/aws-bundle:~1.0
 ```
 
 ### 2. Register
@@ -54,9 +54,18 @@ Add the following configuration to your `app/config/config.yml`
 
 ``` yaml
 seferov_aws:
-    key: CHANGE_WITH_YOUR_AWS_KEY
-    secret: CHANGE_WITH_YOUR_AWS_SECRET
+    key: AWS_KEY
+    secret: AWS_SECRET
+    region: AWS_REGION
+    services:
+        s3:
+            key: AWS_S3_KEY
+            secret: AWS_S3_SECRET
+            region: AWS_S3_REGION
+    # ...
 ```
+
+For further configuration see [Configuration page](https://github.com/seferov/aws-bundle/blob/master/Resources/doc/configuration.md).
 
 ## Usage
 

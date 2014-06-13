@@ -15,6 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
+ use Seferov\AwsBundle\Services\ServicesFactory;
 
 /**
  * SeferovAWSExtension
@@ -23,6 +24,8 @@ use Symfony\Component\DependencyInjection\Loader;
  */
 class SeferovAwsExtension extends Extension
 {
+    const SERVICE_NAMESPACE = 'seferov_aws';
+
     /**
      * @param array            $configs
      * @param ContainerBuilder $container
@@ -36,7 +39,27 @@ class SeferovAwsExtension extends Extension
         $loader->load('services.xml');
 
         foreach ($config as $key => $value) {
-            $container->setParameter('seferov_aws.' . $key, $value);
+            if ($key == 'services') {
+                foreach ($config['services'] as $sk => $sv) {
+                    if (!array_key_exists('region', $sv) || !$sv['region']) {
+                        $sv['region'] = $config['region'];
+                    }
+                    $container->setParameter(self::SERVICE_NAMESPACE .'.'. $sk, $sv);
+                }
+                continue;
+            }
+
+            $container->setParameter(self::SERVICE_NAMESPACE .'.'. $key, $value);
+        }
+
+        foreach (ServicesFactory::$AVAILABLE_SERVICES as $service) {
+            if (!array_key_exists($service, $config['services'])) {
+                $container->setParameter(self::SERVICE_NAMESPACE.'.'.$service, array(
+                    'key' => $config['key'],
+                    'secret' => $config['secret'],
+                    'region' => $config['region']
+                ));
+            }
         }
     }
 }
