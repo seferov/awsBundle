@@ -16,6 +16,7 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 use Seferov\AwsBundle\Services\ServicesFactory;
+use Seferov\AwsBundle\Services\Helper\ServicesHelper;
 
 /**
  * SeferovAWSExtension
@@ -53,8 +54,9 @@ class SeferovAwsExtension extends Extension
         }
 
         foreach (ServicesFactory::$AVAILABLE_SERVICES as $service) {
-            if (!array_key_exists($service, $config['services'])) {
-                $container->setParameter(self::SERVICE_NAMESPACE.'.'.$service, array(
+            $serviceKey = ServicesHelper::camelcaseToUnderscore($service);
+            if (!array_key_exists($serviceKey, $config['services'])) {
+                $container->setParameter(self::SERVICE_NAMESPACE.'.' . $serviceKey, array(
                     'key' => $config['key'],
                     'secret' => $config['secret'],
                     'region' => $config['region']

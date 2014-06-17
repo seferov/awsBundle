@@ -10,6 +10,7 @@
  */
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Seferov\AwsBundle\Services\ServicesFactory;
 
 /**
  * Tests for various services.
@@ -18,20 +19,14 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
  */
 class ServicesTest extends WebTestCase
 {
-    public function testS3()
+    public function testAvailableServices()
     {
         $client = static::createClient();
+        $availableServices = ServicesFactory::$AVAILABLE_SERVICES;
 
-        $s3 = $client->getContainer()->get('aws.s3');
-        $this->assertEquals('Aws\S3\S3Client', get_class($s3));
-    }
-
-    public function testSqs()
-    {
-        $client = static::createClient();
-
-        $sqs = $client->getContainer()->get('aws.sqs');
-        $this->assertEquals('Aws\Sqs\SqsClient', get_class($sqs));
+        foreach ($availableServices as $service) {
+            $this->assertEquals("Aws\\".$service."\\".$service."Client", get_class($client->getContainer()->get('aws.' . strtolower($service))));
+        }
     }
 
     /**

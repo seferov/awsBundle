@@ -11,6 +11,8 @@
 
 namespace Seferov\AwsBundle\Entity;
 
+use Seferov\AwsBundle\Services\Helper\ServicesHelper;
+
 /**
  * AWS Credentials entity.
  *
@@ -45,6 +47,8 @@ class AwsCredentials
      */
     public function getParameters($service = null)
     {
-        return self::$parameters[$service];
+        $serviceKey = ServicesHelper::camelcaseToUnderscore($service);
+
+        return self::$parameters[$serviceKey];
     }
 }

@@ -24,7 +24,39 @@ class ServicesFactory
     /**
      * @var array
      */
-    public static $AVAILABLE_SERVICES = array('s3', 'sqs');
+    public static $AVAILABLE_SERVICES = array(
+        'CloudFront',
+        'CloudSearch',
+        'CloudWatch',
+        'DynamoDb',
+        'Ec2',
+        'Emr',
+        'ElasticTranscoder',
+        'ElastiCache',
+        'Glacier',
+        'Redshift',
+        'Rds',
+        'Route53',
+        'Ses',
+        'Sns',
+        'Sqs',
+        'S3',
+        'Swf',
+        'SimpleDb',
+        'AutoScaling',
+        'CloudFormation',
+        'CloudTrail',
+        'DataPipeline',
+        'DirectConnect',
+        'ElasticBeanstalk',
+        'Iam',
+        'ImportExport',
+        'OpsWorks',
+        'Sts',
+        'StorageGateway',
+        'Support',
+        'ElasticLoadBalancing'
+    );
 
     /**
      * @param  AWSCredentials            $AWSCredentials
@@ -34,7 +66,6 @@ class ServicesFactory
      */
     public function get(AWSCredentials $AWSCredentials, $service)
     {
-        $service = strtolower($service);
         $aws = Aws::factory($AWSCredentials->getParameters($service));
 
         return $aws->get($service);

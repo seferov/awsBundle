@@ -4,7 +4,9 @@ AWS Bundle
 [![Build Status](https://travis-ci.org/seferov/aws-bundle.svg?branch=master)](https://travis-ci.org/seferov/aws-bundle)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28/mini.png)](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28)
 
-Symfony2 AWS Bundle which wraps [official AWS SDK](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html).
+Amazon Web Services Symfony2 Bundle built on the top of [official AWS SDK](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html).
+
+Available services: CloudFront, CloudSearch, CloudWatch, DynamoDb, Ec2, Emr, ElasticTranscoder, ElastiCache, Glacier, Redshift, Rds, Route53, Ses, Sns, Sqs, S3, Swf, SimpleDb, AutoScaling, CloudFormation, CloudTrail, DataPipeline, DirectConnect, ElasticBeanstalk, Iam, ImportExport, OpsWorks, Sts, StorageGateway, Support, ElasticLoadBalancing
 
 ## Installation:
 
@@ -52,6 +54,8 @@ public function registerBundles()
 ### 3. Configure
 
 Add the following configuration to your `app/config/config.yml`
+
+Example:
 
 ``` yaml
 seferov_aws:
