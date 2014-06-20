@@ -3,7 +3,6 @@ AWS Bundle
 
 [![Build Status](https://travis-ci.org/seferov/aws-bundle.svg?branch=master)](https://travis-ci.org/seferov/aws-bundle)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28/mini.png)](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28)
-[![Latest Stable Version](https://poser.pugx.org/seferov/aws-bundle/v/stable.svg)](https://packagist.org/packages/seferov/aws-bundle)
 
 Amazon Web Services Symfony2 Bundle built on the top of [official AWS SDK](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html).
 
