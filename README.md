@@ -6,7 +6,7 @@ AWS Bundle
 
 Amazon Web Services Symfony2 Bundle built on the top of [official AWS SDK](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html).
 
-Available services: CloudFront, CloudSearch, CloudWatch, DynamoDb, Ec2, Emr, ElasticTranscoder, ElastiCache, Glacier, Redshift, Rds, Route53, Ses, Sns, Sqs, S3, Swf, SimpleDb, AutoScaling, CloudFormation, CloudTrail, DataPipeline, DirectConnect, ElasticBeanstalk, Iam, ImportExport, OpsWorks, Sts, StorageGateway, Support, ElasticLoadBalancing
+Available services: CloudFront, CloudSearch, CloudWatch, DynamoDB, EC2, EMR, Elastic Transcoder, ElastiCache, Glacier, Redshift, RDS, Route 53, SES, SNS, SQS, S3, SWF, SimpleDB, AutoScaling, CloudFormation, CloudTrail, DataPipeline, DirectConnect, ElasticBeanstalk, IAM, ImportExport, OpsWorks, STS, StorageGateway, Support, ElasticLoadBalancing
 
 ## Installation:
 
@@ -17,7 +17,7 @@ Add to your composer.json
 ``` js
 {
     "require": {
-        "seferov/aws-bundle": "~1.0"
+        "seferov/aws-bundle": "~1.1"
     }
 }
 ```
@@ -32,7 +32,7 @@ php composer.phar update seferov/aws-bundle
 Or simply you can run the command:
 
 ``` bash
-php composer.phar require seferov/aws-bundle:~1.0
+php composer.phar require seferov/aws-bundle:~1.1
 ```
 
 ### 2. Register
@@ -69,6 +69,8 @@ seferov_aws:
             region: AWS_S3_REGION
     # ...
 ```
+
+Service names are underscored, such as `elastic_beanstalk`.
 
 For further configuration see [Configuration page](https://github.com/seferov/aws-bundle/blob/master/Resources/doc/configuration.md).
 
