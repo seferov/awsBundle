@@ -23,7 +23,7 @@ class AwsCredentials
     /**
      * @var array
      */
-    protected static $parameters = array();
+    private $parameters = array();
 
     /**
      * @param array $parameters
@@ -38,7 +38,7 @@ class AwsCredentials
      */
     public function setParameters(array $parameters)
     {
-        self::$parameters = $parameters;
+        $this->parameters = $parameters;
     }
 
     /**
@@ -49,6 +49,6 @@ class AwsCredentials
     {
         $serviceKey = ServicesHelper::camelcaseToUnderscore($service);
 
-        return self::$parameters[$serviceKey];
+        return $this->parameters[$serviceKey];
     }
 }
