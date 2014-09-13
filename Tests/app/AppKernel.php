@@ -9,8 +9,6 @@
  * file that was distributed with this source code.
  */
 
-namespace Seferov\AwsBundle\Tests\app;
-
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
