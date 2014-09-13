@@ -42,9 +42,9 @@ class SeferovAwsExtension extends Extension
         foreach ($config as $key => $value) {
             if ($key == 'services') {
                 foreach ($config['services'] as $sk => $sv) {
-                    if (!array_key_exists('region', $sv) || !$sv['region']) {
+                    if (!array_key_exists('region', $sv) || !$sv['region'])
                         $sv['region'] = $config['region'];
-                    }
+
                     $container->setParameter(self::SERVICE_NAMESPACE .'.'. $sk, $sv);
                 }
                 continue;
