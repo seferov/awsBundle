@@ -28,6 +28,11 @@ class SeferovAwsExtension extends Extension
     const SERVICE_NAMESPACE = 'seferov_aws';
 
     /**
+     * @var array
+     */
+    public $configKeys = array('key', 'secret', 'region', 'profile');
+
+    /**
      * @param array            $configs
      * @param ContainerBuilder $container
      */
@@ -39,29 +44,27 @@ class SeferovAwsExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        foreach ($config as $key => $value) {
-            if ($key == 'services') {
-                foreach ($config['services'] as $sk => $sv) {
-                    if (!array_key_exists('region', $sv) || !$sv['region'])
-                        $sv['region'] = $config['region'];
-
-                    $container->setParameter(self::SERVICE_NAMESPACE .'.'. $sk, $sv);
-                }
-                continue;
-            }
-
-            $container->setParameter(self::SERVICE_NAMESPACE .'.'. $key, $value);
+        // Base config
+        $baseConfig = array();
+        foreach ($this->configKeys as $configKey) {
+            $baseConfig[$configKey] = array_key_exists($configKey, $config) && $config[$configKey] ? $config[$configKey] : null;
+            $container->setParameter(self::SERVICE_NAMESPACE.'.'.$configKey, $config[$configKey]);
         }
 
         foreach (ServicesFactory::$AVAILABLE_SERVICES as $service) {
             $serviceKey = ServicesHelper::camelcaseToUnderscore($service);
-            if (!array_key_exists($serviceKey, $config['services'])) {
-                $container->setParameter(self::SERVICE_NAMESPACE.'.' . $serviceKey, array(
-                    'key' => $config['key'],
-                    'secret' => $config['secret'],
-                    'region' => $config['region']
-                ));
+            if (array_key_exists($serviceKey, $config['services'])) {
+                foreach ($this->configKeys as $configKey) {
+                    if (!array_key_exists($configKey, $config['services'][$serviceKey]) && array_key_exists($configKey, $baseConfig) && $baseConfig[$configKey]) {
+                        $config['services'][$serviceKey][$configKey] = $baseConfig[$configKey];
+                    }
+                }
             }
+            else {
+                $config['services'][$serviceKey] = $baseConfig;
+            }
+
+            $container->setParameter(self::SERVICE_NAMESPACE.'.'.$serviceKey, $config['services'][$serviceKey]);
         }
     }
 }
