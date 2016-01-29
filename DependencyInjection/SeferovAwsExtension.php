@@ -17,6 +17,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 use Seferov\AwsBundle\Services\ServicesFactory;
 use Seferov\AwsBundle\Services\Helper\ServicesHelper;
+use Symfony\Component\HttpKernel\Kernel;
 
 /**
  * SeferovAWSExtension
@@ -44,6 +45,12 @@ class SeferovAwsExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
+        if (Kernel::VERSION < 2.4) {
+            $loader->load('service_factory_2.3.xml');
+        } else {
+            $loader->load('service_factory_3.xml');
+        }
+
         // Base config
         $baseConfig = array();
         foreach ($this->configKeys as $configKey) {
@@ -59,8 +66,7 @@ class SeferovAwsExtension extends Extension
                         $config['services'][$serviceKey][$configKey] = $baseConfig[$configKey];
                     }
                 }
-            }
-            else {
+            } else {
                 $config['services'][$serviceKey] = $baseConfig;
             }
 

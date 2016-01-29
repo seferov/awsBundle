@@ -7,17 +7,17 @@
     "authors": [
         {
             "name": "Farhad Safarov",
-            "homepage": "http://ferhad.in"
+            "homepage": "http://farhadsafarov.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "~2.1",
+        "symfony/symfony": "~2.3|~3.0",
         "aws/aws-sdk-php": "2.4.10"
     },
     "require-dev": {
-        "symfony/finder": "2.6.*@dev"
+        "symfony/finder": "2.6.*@dev|~3.0"
     },
     "autoload": {
         "psr-4": {
