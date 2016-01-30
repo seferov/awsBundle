@@ -51,10 +51,8 @@
             </argument>
         </service>
 
-        <service id="seferov_aws.service"
-                 factory-method="get"
-                 factory-service="seferov_aws.service_factory"
-                 abstract="true">
+        <service id="seferov_aws.service" abstract="true">
+            <factory service="seferov_aws.service_factory" method="get" />
             <argument type="service" id="seferov_aws.credentials" />
         </service>
 
