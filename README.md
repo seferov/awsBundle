@@ -5,7 +5,7 @@ AWS Bundle
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/seferov/aws-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/seferov/aws-bundle/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28/mini.png)](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28)
 
-Amazon Web Services Symfony2 Bundle built on the top of [official AWS SDK](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html).
+Amazon Web Services Symfony Bundle built on the top of [official AWS SDK](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html).
 
 Available services: CloudFront, CloudSearch, CloudWatch, DynamoDB, EC2, EMR, Elastic Transcoder, ElastiCache, Glacier, Redshift, RDS, Route 53, SES, SNS, SQS, S3, SWF, SimpleDB, AutoScaling, CloudFormation, CloudTrail, DataPipeline, DirectConnect, ElasticBeanstalk, IAM, ImportExport, OpsWorks, STS, StorageGateway, Support, ElasticLoadBalancing
 
