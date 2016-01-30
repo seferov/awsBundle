@@ -51,11 +51,6 @@
             </argument>
         </service>
 
-        <service id="seferov_aws.service" abstract="true">
-            <factory service="seferov_aws.service_factory" method="get" />
-            <argument type="service" id="seferov_aws.credentials" />
-        </service>
-
         <service id="aws.cloudFront" class="CloudFront" parent="seferov_aws.service">
             <argument>CloudFront</argument>
         </service>
