@@ -4,5 +4,3 @@ phpunit.xml
 Tests/app/cache/*
 
 vendor/*
-
-.idea/*
