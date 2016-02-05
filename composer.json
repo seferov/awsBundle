@@ -1,7 +1,7 @@
 {
     "name": "seferov/aws-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony2 wrapper of AWS SDK",
+    "description": "Symfony wrapper of AWS SDK",
     "keywords": ["aws", "amazon web services"],
     "license": "MIT",
     "authors": [

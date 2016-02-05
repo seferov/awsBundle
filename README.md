@@ -1,7 +1,7 @@
 AWS Bundle
 ==========
 
-[![Build Status](https://travis-ci.org/seferov/awsBundle.svg?branch=1.1.2)](https://travis-ci.org/seferov/awsBundle)
+[![Build Status](https://travis-ci.org/seferov/awsBundle.svg?branch=1.2.0)](https://travis-ci.org/seferov/awsBundle)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/seferov/aws-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/seferov/aws-bundle/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28/mini.png)](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28)
 
@@ -18,7 +18,7 @@ Add to your composer.json
 ``` js
 {
     "require": {
-        "seferov/aws-bundle": "~1.1"
+        "seferov/aws-bundle": "~1.2"
     }
 }
 ```
@@ -33,7 +33,7 @@ php composer.phar update seferov/aws-bundle
 Or simply you can run the command:
 
 ``` bash
-php composer.phar require seferov/aws-bundle:~1.1
+php composer.phar require seferov/aws-bundle:~1.2
 ```
 
 ### 2. Register
