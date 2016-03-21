@@ -3,7 +3,7 @@
 /*
  * This file is part of the SeferovAwsBundle package.
  *
- * (c) Farhad Safarov <http://ferhad.in>
+ * (c) Farhad Safarov <https://farhadsafarov.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
