@@ -43,7 +43,7 @@ class SeferovAwsExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        if (Kernel::VERSION < 2.4) {
+        if (Kernel::VERSION < 2.6) {
             $loader->load('service_factory_2.3.xml');
         } else {
             $loader->load('service_factory_3.xml');
