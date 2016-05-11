@@ -1,7 +1,7 @@
 AWS Bundle
 ==========
 
-[![Build Status](https://travis-ci.org/seferov/awsBundle.svg?branch=1.2.0)](https://travis-ci.org/seferov/awsBundle)
+[![Build Status](https://travis-ci.org/seferov/awsBundle.svg?branch=master)](https://travis-ci.org/seferov/awsBundle)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/seferov/aws-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/seferov/aws-bundle/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28/mini.png)](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28)
 
