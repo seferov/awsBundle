@@ -2,7 +2,7 @@
 
 Parameters can be set for each services seperately. If not set, general parameters at the top will be applied.
 
-Available services: CloudFront, CloudSearch, CloudWatch, DynamoDb, Ec2, Emr, ElasticTranscoder, ElastiCache, Glacier, Redshift, Rds, Route53, Ses, Sns, Sqs, S3, Swf, SimpleDb, AutoScaling, CloudFormation, CloudTrail, DataPipeline, DirectConnect, ElasticBeanstalk, Iam, ImportExport, OpsWorks, Sts, StorageGateway, Support, ElasticLoadBalancing
+Available services: CloudFront, CloudSearch, CloudWatch, CloudWatchLogs, CognitoIdentity, CognitoSync, DynamoDb, Ec2, Emr, ElasticTranscoder, ElastiCache, Glacier, Redshift, Rds, Route53, Ses, Sns, Sqs, S3, Swf, SimpleDb, AutoScaling, CloudFormation, CloudTrail, DataPipeline, DirectConnect, ElasticBeanstalk, Iam, ImportExport, OpsWorks, Sts, StorageGateway, Support, ElasticLoadBalancing
 
 ``` yaml
 seferov_aws:

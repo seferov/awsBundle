@@ -20,6 +20,9 @@
                 <argument key="cloud_front">%seferov_aws.cloud_front%</argument>
                 <argument key="cloud_search">%seferov_aws.cloud_search%</argument>
                 <argument key="cloud_watch">%seferov_aws.cloud_watch%</argument>
+                <argument key="cloud_watch_logs">%seferov_aws.cloud_watch_logs%</argument>
+                <argument key="cognito_identity">%seferov_aws.cognito_identity%</argument>
+                <argument key="cognito_sync">%seferov_aws.cognito_sync%</argument>
                 <argument key="dynamo_db">%seferov_aws.dynamo_db%</argument>
                 <argument key="ec2">%seferov_aws.ec2%</argument>
                 <argument key="emr">%seferov_aws.emr%</argument>
@@ -63,6 +66,18 @@
             <argument>CloudWatch</argument>
         </service>
 
+        <service id="aws.cloudWatchLogs" class="CloudWatchLogs" parent="seferov_aws.service">
+            <argument>CloudWatchLogs</argument>
+        </service>
+        
+        <service id="aws.cognitoIdentity" class="CognitoIdentity" parent="seferov_aws.service">
+            <argument>CognitoIdentity</argument>
+        </service>
+        
+        <service id="aws.cognitoSync" class="CognitoSync" parent="seferov_aws.service">
+            <argument>CognitoSync</argument>
+        </service>
+        
         <service id="aws.dynamoDb" class="DynamoDb" parent="seferov_aws.service">
             <argument>DynamoDb</argument>
         </service>
