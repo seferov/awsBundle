@@ -12,11 +12,12 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.5",
         "symfony/symfony": "~2.3|~3.0",
-        "aws/aws-sdk-php": "^2.6.11"
+        "aws/aws-sdk-php": "^3.19"
     },
     "require-dev": {
+        "phpunit/phpunit": "^5.5",
         "symfony/finder": "2.6.*@dev|~3.0"
     },
     "autoload": {

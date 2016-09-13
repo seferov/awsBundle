@@ -17,3 +17,8 @@ seferov_aws:
             key: ses_key
             secret: ses_secret
             region: 'us-east-1'
+        s3:
+            key: s3_key
+            secret: s3_secret
+            region: 'us-east-1'
+            version: '2006-03-01'

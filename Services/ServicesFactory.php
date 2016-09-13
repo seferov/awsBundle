@@ -11,11 +11,11 @@
 
 namespace Seferov\AwsBundle\Services;
 
-use \Aws\Common\Aws;
+use \Aws\Sdk as Aws;
 use \Seferov\AwsBundle\Entity\AWSCredentials;
 
 /**
- * Factory class that initiates an AWS service.
+ * Factory class that initiates an AWS client.
  */
 class ServicesFactory
 {
@@ -43,7 +43,6 @@ class ServicesFactory
         'Sqs',
         'S3',
         'Swf',
-        'SimpleDb',
         'AutoScaling',
         'CloudFormation',
         'CloudTrail',
@@ -67,8 +66,8 @@ class ServicesFactory
      */
     public function get(AWSCredentials $AWSCredentials, $service)
     {
-        $aws = Aws::factory($AWSCredentials->getParameters($service));
+        $aws = new Aws($AWSCredentials->getParameters());
 
-        return $aws->get($service);
+        return $aws->createClient($service, $AWSCredentials->getParameters($service));
     }
 }

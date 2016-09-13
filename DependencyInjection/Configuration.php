@@ -49,6 +49,7 @@ class Configuration implements ConfigurationInterface
                             ->scalarNode('secret')->end()
                             ->scalarNode('region')->end()
                             ->scalarNode('profile')->end()
+                            ->scalarNode('version')->defaultValue('latest')->end()
                         ->end()
                     ->end()
                 ->end()

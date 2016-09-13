@@ -47,6 +47,9 @@ class AwsCredentials
     {
         $serviceKey = ServicesHelper::camelcaseToUnderscore($service);
 
-        return $this->parameters[$serviceKey];
+        return $service
+            ? $this->parameters[$serviceKey]
+            : array_intersect_key($this->parameters, array_flip(array('key', 'secret', 'region')))
+        ;
     }
 }

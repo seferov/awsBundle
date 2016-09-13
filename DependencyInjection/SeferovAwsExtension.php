@@ -29,7 +29,7 @@ class SeferovAwsExtension extends Extension
     /**
      * @var array
      */
-    public $configKeys = array('key', 'secret', 'region', 'profile');
+    public $configKeys = array('key', 'secret', 'region', 'profile', 'version');
 
     /**
      * @param array            $configs
@@ -52,6 +52,9 @@ class SeferovAwsExtension extends Extension
         // Base config
         $baseConfig = array();
         foreach ($this->configKeys as $configKey) {
+            if ($configKey === 'version') {
+                continue 1;
+            }
             $baseConfig[$configKey] = array_key_exists($configKey, $config) && $config[$configKey] ? $config[$configKey] : null;
             $container->setParameter(self::SERVICE_NAMESPACE.'.'.$configKey, $config[$configKey]);
         }
@@ -65,7 +68,7 @@ class SeferovAwsExtension extends Extension
                     }
                 }
             } else {
-                $config['services'][$serviceKey] = $baseConfig;
+                $config['services'][$serviceKey] = array_merge($baseConfig, array('version' => 'latest'));
             }
 
             $container->setParameter(self::SERVICE_NAMESPACE.'.'.$serviceKey, $config['services'][$serviceKey]);
