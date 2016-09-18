@@ -29,7 +29,7 @@ class SeferovAwsExtension extends Extension
     /**
      * @var array
      */
-    public $configKeys = array('key', 'secret', 'region', 'profile', 'version');
+    public $configKeys = array('credentials', 'region', 'profile', 'version');
 
     /**
      * @param array            $configs

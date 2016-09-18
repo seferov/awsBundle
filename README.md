@@ -41,14 +41,17 @@ Example:
 
 ``` yaml
 seferov_aws:
-    key: AWS_KEY
-    secret: AWS_SECRET
+    credentials:
+        key: AWS_KEY
+        secret: AWS_SECRET
     region: AWS_REGION
     services:
         s3:
-            key: AWS_S3_KEY
-            secret: AWS_S3_SECRET
+            credentials:
+                key: AWS_S3_KEY
+                secret: AWS_S3_SECRET
             region: AWS_S3_REGION
+            version: '2006-03-01'
     # ...
 ```
 
