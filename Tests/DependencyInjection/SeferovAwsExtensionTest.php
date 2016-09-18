@@ -34,8 +34,10 @@ class SeferovAwsExtensionTest extends \PHPUnit_Framework_TestCase
      */
     private static $config = array(
         array(
-            'key' => 'SOME_KEY',
-            'secret' => 'SOME_SECRET',
+            'credentials' => array(
+                'key' => 'SOME_KEY',
+                'secret' => 'SOME_SECRET',
+            ),
             'services' => array(
                 'sqs' => array(
                     'region' => 'eu-west-1'

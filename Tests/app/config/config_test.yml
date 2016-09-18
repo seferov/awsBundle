@@ -6,19 +6,23 @@ framework:
     test: ~
 
 seferov_aws:
-    key: key
-    secret: secret
+    credentials:
+        key: key
+        secret: secret
     region: 'us-east-1'
     services:
         sqs:
-            key: sqs_key
-            secret: sqs_secret
+            credentials:
+                key: sqs_key
+                secret: sqs_secret
         ses:
-            key: ses_key
-            secret: ses_secret
+            credentials:
+                key: ses_key
+                secret: ses_secret
             region: 'us-east-1'
         s3:
-            key: s3_key
-            secret: s3_secret
+            credentials:
+                key: s3_key
+                secret: s3_secret
             region: 'us-east-1'
             version: '2006-03-01'

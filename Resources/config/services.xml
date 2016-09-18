@@ -14,8 +14,7 @@
 
         <service id="seferov_aws.credentials" class="%seferov_aws.credentials.class%" public="false">
             <argument type="collection">
-                <argument key="key">%seferov_aws.key%</argument>
-                <argument key="secret">%seferov_aws.secret%</argument>
+                <argument key="credentials">%seferov_aws.credentials%</argument>
                 <argument key="region">%seferov_aws.region%</argument>
                 <argument key="cloud_front">%seferov_aws.cloud_front%</argument>
                 <argument key="cloud_search">%seferov_aws.cloud_search%</argument>
