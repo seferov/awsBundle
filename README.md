@@ -12,35 +12,17 @@ Available services: CloudFront, CloudSearch, CloudWatch, CloudWatchLogs, Cognito
 
 ### 1. Download
 
-Add to your composer.json
-
-``` js
-{
-    "require": {
-        "seferov/aws-bundle": "~1.2"
-    }
-}
-```
-
 Download the bundle:
 
-
 ``` bash
-php composer.phar update seferov/aws-bundle
-```
-
-Or simply you can run the command:
-
-``` bash
-php composer.phar require seferov/aws-bundle:~1.2
+composer require seferov/aws-bundle
 ```
 
 ### 2. Register
 
-Enable the bundle in the kernel:
+Enable the bundle in `app/AppKernel.php`:
 
 ``` php
-// app/AppKernel.php
 // ...
 public function registerBundles()
 {
@@ -72,7 +54,7 @@ seferov_aws:
 
 Service names are underscored, such as `elastic_beanstalk`.
 
-For further configuration see [Configuration page](https://github.com/seferov/aws-bundle/blob/master/Resources/doc/configuration.md).
+For further configuration see [Configuration page]("https://github.com/seferov/aws-bundle/blob/master/Resources/doc/configuration.md").
 
 ## Usage
 
@@ -94,4 +76,4 @@ public function someAction()
 }
 ```
 
-For more reference check [offical SDK documentation](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html)
+For more reference check [official SDK documentation]("http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html")

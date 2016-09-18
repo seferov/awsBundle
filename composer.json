@@ -7,7 +7,11 @@
     "authors": [
         {
             "name": "Farhad Safarov",
-            "homepage": "http://farhadsafarov.com"
+            "homepage": "https://farhadsafarov.com"
+        },
+        {
+            "name": "Community",
+            "homepage": "https://github.com/seferov/awsBundle/graphs/contributors"
         }
     ],
     "minimum-stability": "dev",
