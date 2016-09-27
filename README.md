@@ -2,6 +2,8 @@ AWS Bundle
 ==========
 
 [![Build Status](https://travis-ci.org/seferov/awsBundle.svg?branch=master)](https://travis-ci.org/seferov/awsBundle)
+[![Test Coverage](https://codeclimate.com/github/seferov/awsBundle/badges/coverage.svg)](https://codeclimate.com/github/seferov/awsBundle/coverage)
+[![Code Climate](https://codeclimate.com/github/seferov/awsBundle/badges/gpa.svg)](https://codeclimate.com/github/seferov/awsBundle)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28/mini.png)](https://insight.sensiolabs.com/projects/5110d57d-0c10-48b5-a43f-df476ba0ad28)
 
 Amazon Web Services Symfony Bundle built on the top of [official AWS SDK](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html).
