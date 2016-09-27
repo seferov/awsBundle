@@ -21,7 +21,8 @@
         "aws/aws-sdk-php": "^3.19"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "~3.2"
+        "symfony/phpunit-bridge": "~3.2",
+        "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
         "psr-4": {

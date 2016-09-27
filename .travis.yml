@@ -38,4 +38,7 @@ before_install:
 
 install: composer update --prefer-dist --no-interaction
 
-script: ./vendor/bin/simple-phpunit
+script: ./vendor/bin/simple-phpunit --coverage-clover build/logs/clover.xml
+
+after_script:
+  - ./vendor/bin/test-reporter
