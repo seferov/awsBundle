@@ -14,14 +14,14 @@
             "homepage": "https://github.com/seferov/awsBundle/graphs/contributors"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.5",
-        "symfony/symfony": "~2.3|~3.0",
+        "symfony/framework-bundle": "~2.3|~3.0|~4.0",
         "aws/aws-sdk-php": "^3.19"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "~3.2",
+        "symfony/browser-kit": "~2.3|~3.0|~4.0",
         "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
