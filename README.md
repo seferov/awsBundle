@@ -8,8 +8,6 @@ AWS Bundle
 
 Amazon Web Services Symfony Bundle built on the top of [official AWS SDK](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html).
 
-Available services: CloudFront, CloudSearch, CloudWatch, CloudWatchLogs, CognitoIdentity, CognitoSync, DynamoDB, EC2, EMR, Elastic Transcoder, ElastiCache, Glacier, Redshift, RDS, Route 53, SES, SNS, SQS, S3, SWF, SimpleDB, AutoScaling, CloudFormation, CloudTrail, DataPipeline, DirectConnect, ElasticBeanstalk, IAM, ImportExport, OpsWorks, STS, StorageGateway, Support, ElasticLoadBalancing
-
 ## Installation:
 
 ### 1. Download
@@ -60,7 +58,7 @@ seferov_aws:
 
 Service names are underscored, such as `elastic_beanstalk`.
 
-For further configuration see [Configuration page]("https://github.com/seferov/aws-bundle/blob/master/Resources/doc/configuration.md").
+For further configuration see [Configuration page](https://github.com/seferov/aws-bundle/blob/master/Resources/doc/configuration.md).
 
 ## Usage
 
@@ -82,4 +80,4 @@ public function someAction()
 }
 ```
 
-For more reference check [official SDK documentation]("http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html")
+For more reference check [official SDK documentation](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html)
