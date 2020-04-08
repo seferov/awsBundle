@@ -1,3 +1,7 @@
+**DEPRECATED** By the time I started aws bundle there was no official library for Symfony. However there is a maintained [official Symfony SDK](https://github.com/aws/aws-sdk-php-symfony), thus I deprecate this bundle in favor of it.
+
+--------
+
 AWS Bundle
 ==========
 
