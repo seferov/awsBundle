@@ -28,5 +28,6 @@
         "psr-4": {
             "Seferov\\AwsBundle\\": ""
         }
-    }
+    },
+    "abandoned": "aws/aws-sdk-php-symfony"
 }
